@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    color: #02e3b6;
+    text-align: center;
+    font-family: 'Consolas';
+}
+
+h1, h3 {
+    font-family: 'Press Start 2P';
+}
+
+.points {
+    text-align: left;
+}
+
+.diffText, #diffLevel {
+    text-align: left;
+    margin-top: 0;
+}
+
+#startBtn, #comebackBtn, #nextBtn {
+    font-family: 'Consolas';
+    font-size: 15px;
+    padding: 15px;
+    background-color: transparent;
+    border: solid #02e3b6 2px;
+    cursor: pointer;
+    color: #02e3b6;
+    outline: 0 !important;;
+}
+
+#comebackBtn, #nextBtn {
+    margin-bottom: 20 
+}
+
+#startBtn:hover, #comebackBtn:hover, #nextBtn:hover {
+    background-color: #02e3b6;
+    color: black;
+}
+
+#block {
+    display: flex;
+}
+
+#quiz {
+    background: #171717;
+    margin: 30px 100px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#remember {
+    text-align: left;
+    background: #171717;
+    margin: 30px 100px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#insult, #comeback {
+    font-size: 20px;
+}

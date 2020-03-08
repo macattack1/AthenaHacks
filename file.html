@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Bully Bot</title>
+        <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Consolas' rel='stylesheet'>
+        <link href="./file.css" rel="stylesheet">
+        <script src="./bully.js"></script>
+    </head>
+    <body>
+        
+        <h1>Bully Bot</h1>
+        <p>Welcome to Bully Bot, a web application created to help individuals combat bullying and to find their voice.</p>
+        <p>Instructions: Bully Bot will give you an insult. Click the 'See Comeback' button to see one way to respond.</p>
+        <p id="promptClick">Click the button below to get started.</p>
+        <input type="button" value="Start" id="startBtn" onclick="showDiv()"/>
+        <div id="quiz"  style="display: none;">
+            <div id="block">
+                <p class="points">Points: </p>
+                <p id="pointsNum">0</p>
+            </div>
+            <div id="block">
+                <p class="diffText">Difficulty: </p>
+                <p id="diffLevel">Easy</p>
+            </div>
+            <p id="insult"></p>
+            <p id="comeback"></p>
+            <input type="button" value="See Comeback" id="comebackBtn" onclick="showComeback()"/>
+            <input type="button" value="Next" id="nextBtn" style="display: none;" onclick="showNext()"/>
+        </div>
+        <div id="remember">
+            <h3>Ways to Combat Bullying/Things to Remember:</h3>
+            <ul>
+                <li>Stay calm; They're trying to get a reaction from you</li>
+                <li>Walk away</li>
+                <li>Use humor</li>
+                <li>Ignore the bully</li>
+                <li>Compliment the bully; it's hard to bully someone who is being nice back</li>
+                <li>Most important: Be confident in yourself. Bullying is more of a reflection of the bully </li>
+            </ul>
+        </div>
+    </body>
+</html>
+
+
