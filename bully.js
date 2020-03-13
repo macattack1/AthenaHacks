@@ -1,3 +1,6 @@
+(function () {
+
+
 let easy = [
     {"insult": "Nobody likes you", "comeback": "Actually my friends and family would disagree with you"},
     {"insult": "You're such a crybaby", "comeback": "I don't think so"},
@@ -49,6 +52,30 @@ let insult = "";
 let comeback = "";
 let randNum = 0;
 
+
+document.addEventListener('DOMContentLoaded', e => {
+    setupEvents();
+});
+
+function setupEvents(){
+    document.body.addEventListener('click', e => {
+        console.log(`body: ${e.target.value} was clicked`);
+    },true);   
+
+    document.getElementById('startBtn').addEventListener('click', e => {
+        showDiv();
+    });  
+    
+    document.getElementById('comebackBtn').addEventListener('click', e => {
+        showComeback();
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', e => {
+        showNext();
+    });
+}
+
+
 function getRandomInt(max) {
     randNum = Math.floor(Math.random() * Math.floor(max));
     return randNum;
@@ -58,22 +85,23 @@ function showDiv() {
     document.getElementById("quiz").style.display = "block";
     updateInsult();
     document.getElementById("insult").textContent = insult;
-    document.getElementById("startBtn").style.display = "none"; 
-    document.getElementById("promptClick").style.display = "none";
+    document.getElementById("startBtn").classList.add('hide');
+    document.getElementById("promptClick").classList.add('hide');
 }
+
 
 function showComeback() {
     document.getElementById("comeback").textContent = comeback;
-    document.getElementById("comebackBtn").style.display = "none";
-    document.getElementById("nextBtn").style.display = "";
+    document.getElementById("comebackBtn").classList.add('hide');
+    document.getElementById("nextBtn").classList.remove('hide');
 }
 
 function showNext() {
     document.getElementById("comeback").textContent = "";
     updateInsult();
     document.getElementById("insult").textContent = insult;
-    document.getElementById("comebackBtn").style.display = "";
-    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("comebackBtn").classList.remove('hide');
+    document.getElementById("nextBtn").classList.add('hide');
     incrementPoints();
     updateDifficulty();
 }
@@ -109,3 +137,6 @@ function incrementPoints() {
     value++;
     document.getElementById('pointsNum').textContent = value;
 }
+
+})();
+

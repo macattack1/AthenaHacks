@@ -8,6 +8,7 @@
         <link href='https://fonts.googleapis.com/css?family=Consolas' rel='stylesheet'>
         <link href="./file.css" rel="stylesheet">
         <script src="./bully.js"></script>
+        <script src="./victim.js"></script>
     </head>
     <body>
         
@@ -15,7 +16,7 @@
         <p>Welcome to Bully Bot, a web application created to help individuals combat bullying and to find their voice.</p>
         <p>Instructions: Bully Bot will give you an insult. Click the 'See Comeback' button to see one way to respond.</p>
         <p id="promptClick">Click the button below to get started.</p>
-        <input type="button" value="Start" id="startBtn" onclick="showDiv()"/>
+        <input type="button" value="Start" id="startBtn"/> 
         <div id="quiz"  style="display: none;">
             <div id="block">
                 <p class="points">Points: </p>
@@ -27,8 +28,9 @@
             </div>
             <p id="insult"></p>
             <p id="comeback"></p>
-            <input type="button" value="See Comeback" id="comebackBtn" onclick="showComeback()"/>
-            <input type="button" value="Next" id="nextBtn" style="display: none;" onclick="showNext()"/>
+            <input type="button" value="See Comeback" id="comebackBtn"/>
+            <!-- <input type="button" value="Next" id="nextBtn" style="display: none;"/> -->
+            <input class="hide" type="button" value="Next" id="nextBtn"/>
         </div>
         <div id="remember">
             <h3>Ways to Combat Bullying/Things to Remember:</h3>

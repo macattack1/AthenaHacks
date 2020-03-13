@@ -60,3 +60,7 @@ h1, h3 {
 #insult, #comeback {
     font-size: 20px;
 }
+
+.hide {
+    display: none;
+}
